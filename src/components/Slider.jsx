@@ -1,5 +1,4 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import { props } from "bluebird";
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
