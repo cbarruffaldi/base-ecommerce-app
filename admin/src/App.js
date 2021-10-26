@@ -10,15 +10,19 @@ import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
+import { useSelector } from "react-redux";
+
 
 function App() {
+  const admin = useSelector((state) => state.user.currentUser.isAdmin);
+
   return (
     <Router>
         <Switch>
         <Route path="/login">
             <Login />
           </Route>
-      <Topbar />
+      {admin && <><Topbar />
       <div className="container">
         <Sidebar />
           <Route exact path="/">
@@ -42,7 +46,7 @@ function App() {
           <Route path="/newproduct">
             <NewProduct />
           </Route>
-      </div>
+      </div></>}
         </Switch>
     </Router>
   );
