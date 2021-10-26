@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const userSlice = createSlice({
     name: "user",
     initialState: {
-        currenctUser: null,
+        currentUser: null,
         isFetching: false,
         error: false
     },
@@ -13,7 +13,7 @@ const userSlice = createSlice({
         },
         loginSuccess: (state, action) => {
             state.isFetching =false;
-            state.currenctUser = action.payload;
+            state.currentUser = action.payload;
         },
         loginFailure: (state) => {
             state.isFetching =false;
