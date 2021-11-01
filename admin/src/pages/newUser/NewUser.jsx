@@ -1,5 +1,7 @@
 import "./newUser.css";
 
+//TODO: Create new user - Similar to product
+
 export default function NewUser() {
   return (
     <div className="newUser">

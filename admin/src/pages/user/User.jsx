@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import "./user.css";
 
+//TODO: User page - Similar to product
 export default function User() {
   return (
     <div className="user">
